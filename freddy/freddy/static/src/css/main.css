@@ -1,0 +1,185 @@
+body{
+    background-color: black;
+    height: 100%;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    overflow-x: hidden;
+    background: url("http://dev:8080/static/src/images/06-darker.jpg");
+}
+ul{
+    padding: 25px 4px 4px 42px;
+}
+li{
+    list-style: none;
+    font-size: 18px;
+    padding: 1px;
+}
+h1{
+    white-space: nowrap;
+    background-color: white;
+    margin: 5px;
+    padding: 10px;
+}
+a{
+    color: white;
+}
+hr{
+    width: 102px;
+    left: 76px;
+    position: relative;
+}
+#nav{
+    z-index:1000;
+    position: relative;
+    top: 130px;
+}
+#left{
+    position: fixed;
+    left: -400px;
+    height: 100%;
+    width: 275px;
+    top: 0;
+    z-index: 200;
+}
+#left > .slant{
+    left: -168px;
+}
+#right{
+    right:-450px;
+    z-index: -10;
+    position: fixed;
+    top: -32px;
+}
+#right > .slant{
+    right: -100px;
+}
+#nav-right{
+    position: fixed;
+    top: 135px;
+    right: -217px;
+    z-index: 10;
+}
+#brand{
+    position: fixed;
+    z-index: 1000;
+    color: white;
+    top: 27px;;
+    left: 23px;
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.4);
+}
+#brand-overlay{
+    position: fixed;
+    z-index: 1001;
+    top: 25px;
+    left: 22px;
+}
+#brand-overlay-h1{
+    background-color: transparent;
+}
+
+#control{
+    bottom: 13px;
+    left: 54px;
+    position: fixed;
+    z-index: 1000;
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.4);
+    background-color: white;
+    color: rgb(51, 51, 51);
+    padding: 3px;
+    margin: 2px;
+    font-weight: bold;
+}
+#control:hover{
+    background-color: #1DC5B5;
+    color: black;
+    cursor: pointer;
+}
+/*class defs*/
+.slant{
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.4);
+    top: -367px;
+    width: 428px;
+    height: 181%;
+    position: relative;
+    background-color: rgba(120, 120, 120, 0.8);
+    -webkit-transform: rotate(11deg);
+    transform: rotate(11deg);
+    -ms-transform: rotate(11deg);
+}
+.link-container:hover{
+    background-color: #1DC5B5;
+}
+.link-container{
+    padding: 6px;
+    position: relative;
+}
+a:hover{
+    color:white;
+}
+.super-script{
+    color: white;
+    padding: 3px;
+    vertical-align: super;
+    font-size: 11px;
+}
+.selected{
+    background-color: #D62020;
+    padding: 2px;
+    left: 9px;
+}
+.selected-right{
+    background-color: #D62020;
+    right: 12px;
+    position: relative;
+}
+/*galleria css*/
+.gallery{
+    width: 97%;
+    height: 100%;
+    position: absolute;
+    margin: 10px;
+    top: -6000px;
+}
+.gallery_selection{
+    z-index: 10;
+}
+.gallery-selection-right > a{
+    padding: 3px 40px 9px 11px;
+    font-size: 39px;
+}
+.gallery-selection-right{
+    padding: 9px 26px 9px 24px;
+}
+.galleria-container{
+    background-color: transparent;
+}
+.galleria-thumbnails .galleria-image { width:15% }
+.galleria-thumbnails{
+    width: 100%
+}
+/*transformations*/
+.slide{
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+}
+
+.slide-fast{
+    -webkit-transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+}
+.slide-downbottom{
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+}
+.slide-downtop{
+    top: 0px;
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+}

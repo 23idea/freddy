@@ -1,0 +1,18 @@
+{
+  "name": "hashnav",
+  "version": "0.0.0",
+  "main": [
+    "./hashnav.js"
+  ],
+  "dependencies": {},
+  "gitHead": "a9cebded793acce5e6e2878338f306bc926514b1",
+  "readme": "# HashNav\n\nSimplest JavaScript hash navigation.\n\n\n## API\n\n### HashNav.initial(value)\n\n- value {String | undefined}\n\nGet/set default hash. Default hash is a hash that will never visible in URL. It’s a default state of a page.\n\n### HashNav.change(value)\n\n- value {String | Function}\n\nSet/execute change handler. `HashNav.change('foo')` will set page has to `#foo` and execute all handlers added via `HashNav.change(function(hash) { ... })`.\n\n\n## Example\n\nSee `demo.html`.\n\n---\n\n## License\n\nThe MIT License, see the included `License.md` file.",
+  "readmeFilename": "Readme.md",
+  "_id": "hashnav@1.0.0",
+  "description": "Simplest JavaScript hash navigation.",
+  "commit": "a9cebded793acce5e6e2878338f306bc926514b1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sapegin/hashnav.git"
+  }
+}

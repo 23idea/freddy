@@ -1,0 +1,13 @@
+doctype 5
+html
+  head
+    meta(charset="utf-8")
+    title
+      block titlename
+    link(rel="stylesheet", href="{{STATIC_URL}}components/bootstrap/css/bootstrap.min.css")
+
+    link(rel="stylesheet", href="{{STATIC_URL}}src/css/main.css")
+    script(type="text/javascript", data-main="{{STATIC_URL}}src/js/main", src="{{STATIC_URL}}components/requirejs/require.js")
+  body
+    block content
+

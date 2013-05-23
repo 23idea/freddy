@@ -1,0 +1,62 @@
+extends base
+
+block titlename
+  | About me
+
+block content
+  script(type="text/javascript")
+    var gallery_data = {{gallery_data|safe|escape }}
+
+  div#brand
+    h1 Fredrick Photography
+  div#brand-overlay
+    h1#brand-overlay-h1 Fredrick Photography
+
+  a#control.slide.link-container= "<<Less"
+
+  div#content
+    div#gallery_holder(style="padding-left:55px").slide
+      each gallery in object_list
+        div(id="gallery-"+gallery.title).gallery.slide
+
+  div#left.slide(style="left: 0")
+    div#nav
+      if object_list
+        ul#selection
+          each gallery, i in object_list
+            li.gallery_selection
+              span.link-container.slide-fast(id="nav-"+gallery.title)
+                span.super-script #{i}
+                a(href="#"+gallery.title)= gallery.title
+      hr 
+      ul#mics
+        li
+          span#nav-contact.link-container.slide-fast
+            span.super-script A
+            a(href="#contact") contact
+        li 
+          span#nav-clients.link-container.slide-fast
+            span.super-script B
+            a(href="#clients") clients
+        li
+          span#nav-about.link-container.slide-fast
+            span.super-script C
+            a(href="#about") about
+    div.slant
+
+  div#nav-right.slide
+    if object_list
+      ul
+        each gallery, i in object_list
+          li.gallery-selection-right
+            a(href="#"+gallery.title, id="right-nav-"+gallery.title).link-container.slide-fast= i
+
+      hr
+      ul
+        li.gallery-selection-right
+          a(id="right-nav-contact").link-container.slide-fast A
+        li.gallery-selection-right 
+          a(id="right-nav-clients").link-container.slide-fast B
+        li.gallery-selection-right
+          a(id="right-nav-about").link-container.slide-fast C
+  div#right.slant.slide
